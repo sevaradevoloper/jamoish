@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+.container {
+    max-width: 1200px;
+    margin   : 0 auto;
+    padding  : 20px;
+}
+
+@layer base {
+  body {
+    @apply m-0 p-0 box-border bg-[#0a0a12]; /* Fon rangi loyihangizga qarab */
+  }
+}
+
+.main {
+    padding-top: 120px; /* Header balandligi + bo'shliq */
+    min-height: 100vh;
+}
