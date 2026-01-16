@@ -13,8 +13,7 @@ const Card = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                        <img
-                            src={rasm1} alt=""  className="w-full h-56 object-cover" />
+                        <img src={rasm1} alt=""  className="w-full h-56 object-cover" />
 
                         <div className="p-6">
                             <a href="#" className="text-sm text-blue-600 font-medium hover:underline" > 22 июля 2022 года </a>
@@ -38,8 +37,7 @@ const Card = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                        <img
-                            src={rasm2} alt=""  className="w-full h-56 object-cover" />
+                        <img src={rasm2} alt=""  className="w-full h-56 object-cover" />
 
                         <div className="p-6">
                             <a href="#" className="text-sm text-blue-600 font-medium hover:underline" > 22 июля 2022 года </a>
@@ -63,8 +61,7 @@ const Card = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                        <img
-                            src={rasm3} alt=""  className="w-full h-56 object-cover" />
+                        <img  src={rasm3} alt=""  className="w-full h-56 object-cover" />
 
                         <div className="p-6">
                             <a href="#" className="text-sm text-blue-600 font-medium hover:underline" > 22 июля 2022 года </a>
@@ -87,8 +84,7 @@ const Card = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                        <img
-                            src={rasm4} alt=""  className="w-full h-56 object-cover" />
+                        <img src={rasm4} alt=""  className="w-full h-56 object-cover" />
 
                         <div className="p-6">
                             <a href="#" className="text-sm text-blue-600 font-medium hover:underline" > 22 июля 2022 года </a>
@@ -112,8 +108,7 @@ const Card = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                        <img
-                            src={rasm5} alt=""  className="w-full h-56 object-cover" />
+                        <img src={rasm5} alt=""  className="w-full h-56 object-cover" />
 
                         <div className="p-6">
                             <a href="#" className="text-sm text-blue-600 font-medium hover:underline" > 22 июля 2022 года </a>
@@ -137,8 +132,7 @@ const Card = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-                        <img
-                            src={rasm6} alt=""  className="w-full h-56 object-cover" />
+                        <img src={rasm6} alt=""  className="w-full h-56 object-cover" />
 
                         <div className="p-6">
                             <a href="#" className="text-sm text-blue-600 font-medium hover:underline" > 22 июля 2022 года </a>

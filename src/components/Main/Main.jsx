@@ -9,9 +9,7 @@ const Main = () => {
 
           <div className="relative">
             <img
-              src={tennisImg}
-              alt="Sport Club"
-              className="w-full h-full object-cover"
+              src={tennisImg} alt="Sport Club" className="w-full h-full object-cover"
             />
           </div>
 
