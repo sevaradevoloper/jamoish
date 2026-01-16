@@ -22,7 +22,7 @@
 }
 
 .main {
-    padding-top: 120px; /* Header balandligi + bo'shliq */
+    padding-top: 0px; /* Header balandligi + bo'shliq */
     min-height: 100vh;
     margin-bottom: 25px;
 }
