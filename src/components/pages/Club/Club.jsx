@@ -1,5 +1,5 @@
 import React from 'react'
-import PhotoCourts from './Фото кортов/Фото кортов'
+import PhotoCourts from './club_photo/club_photo.jsx'
 
 const Club = () => {
   return (

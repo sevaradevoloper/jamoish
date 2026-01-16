@@ -7,8 +7,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import cord1 from './img/cord1.png';
-import cord2 from './img/cord2.png';
+import cord1 from '../img/cord1.png';
+import cord2 from '../img/cord2.png';
+
 
 const PhotoCourts = () => {
   return (
