@@ -1,6 +1,5 @@
 import React from 'react'
 
-import tailwindcss from '@tailwindcss/vite'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
