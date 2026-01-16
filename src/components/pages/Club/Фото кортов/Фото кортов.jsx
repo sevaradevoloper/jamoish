@@ -1,8 +1,5 @@
 import React from 'react'
-
-import tailwindcss from '@tailwindcss/vite'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -30,9 +27,9 @@ const first_section = () => {
                         <SwiperSlide>
                             <div className="relative">
                                 <img
-                                    src="/img/cord1.png"
+                                    src={require('./img/cord1.png')}
                                     alt="court"
-                                    className="h-[420px] w-full object-cover"
+                                    className="h-105 w-full object-cover"
                                 />
                                 <span className="absolute bottom-6 left-6 rounded bg-violet-500 px-4 py-2 text-sm text-white">
                                     Летний корт
@@ -43,9 +40,9 @@ const first_section = () => {
                         <SwiperSlide>
                             <div className="relative">
                                 <img
-                                    src="/img/cord2.png"
+                                    src={require('./img/cord2.png')}
                                     alt="court"
-                                    className="h-[420px] w-full object-cover"
+                                    className="h-105 w-full object-cover"
                                 />
                                 <span className="absolute bottom-6 left-6 rounded bg-violet-500 px-4 py-2 text-sm text-white">
                                     Закрытый корт
@@ -59,4 +56,4 @@ const first_section = () => {
     )
 }
 
-export default first_section
+export default PhotoCourts
