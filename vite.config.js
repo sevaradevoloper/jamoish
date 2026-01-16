@@ -5,6 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss(),],
-  logLevel: 'info', // 'warn' o'rniga 'info' qo'ysangiz, ba'zi ogohlantirishlar yashiriladi
-  clearScreen: false,
+  
 })
