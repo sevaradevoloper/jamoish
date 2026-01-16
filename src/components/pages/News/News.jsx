@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Card from './Card/Card'
 const News = () => {
   return (
   <>
-  {"shu pageni Herosini va qoyib chaqrib ketila"}
+   <Card/>
   </>
   )
 }

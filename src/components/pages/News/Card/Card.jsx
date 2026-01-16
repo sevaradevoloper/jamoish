@@ -1,10 +1,10 @@
 import React from 'react'
-import rasm1 from './images/rasm1.svg'
-import rasm2 from './images/rasm2.svg'
-import rasm3 from './images/rasm3.svg'
-import rasm4 from './images/rasm4.svg'
-import rasm5 from './images/rasm5.svg'
-import rasm6 from './images/rasm6.svg'
+// import rasm1 from './images/rasm1.svg'
+// import rasm2 from './images/rasm2.svg'
+// import rasm3 from './images/rasm3.svg'
+// import rasm4 from './images/rasm4.svg'
+// import rasm5 from './images/rasm5.svg'
+// import rasm6 from './images/rasm6.svg'
 const Card = () => {
     return (
        <>

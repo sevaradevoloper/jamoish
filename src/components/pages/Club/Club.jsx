@@ -1,9 +1,10 @@
 import React from 'react'
+import PhotoCourts from './Фото кортов/Фото кортов'
 
 const Club = () => {
   return (
     <>
-    {"shu pageni Herosini va qoyib chaqrib ketila"}
+     <PhotoCourts/>
     </>
   )
 }
