@@ -4,7 +4,7 @@ import PhotoCourts from './Фото кортов/Фото кортов'
 const Club = () => {
   return (
     <>
-     <PhotoCourts/>
+     <PhotoCourts />
     </>
   )
 }
