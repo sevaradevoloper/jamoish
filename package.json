@@ -11,15 +11,21 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+<<<<<<< HEAD
     "flowbite": "^4.0.1",
     "flowbite-react": "^0.12.16",
+=======
+>>>>>>> 4c9592b9abc397cd23641dc1436b2aa9fa66466e
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.12.0",
+<<<<<<< HEAD
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
+=======
+>>>>>>> 4c9592b9abc397cd23641dc1436b2aa9fa66466e
     "swiper": "^12.0.3",
     "tailwindcss": "^4.1.18"
   },
