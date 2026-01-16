@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-const first_section = () => {
+const PhotoCourts = () => {
     return (
         <main>
             <section className="bg-black px-6 py-10">
