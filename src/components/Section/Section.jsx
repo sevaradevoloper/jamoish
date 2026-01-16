@@ -5,7 +5,7 @@ import court3 from './images/court3.png'
 
 const Section = () => {
   return (
-    <div className="py-[80px]">
+    <div className="w-full bg-white py-20">
       <div className="container mx-auto px-[20px]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
 
