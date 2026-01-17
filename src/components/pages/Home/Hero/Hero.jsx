@@ -24,7 +24,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-5 relative z-30 text-white ">
         <div className="max-w-[800px] mb-20 my-28">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8 uppercase max-w-[500px]">
+          <h1 className="text-4xl md:text-4xl font-bold leading-tight mb-8 uppercase max-w-[500px]">
             Петербургский теннисный клуб имени М.А. Пасечникова
           </h1>
 
