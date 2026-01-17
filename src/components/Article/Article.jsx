@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 import { GoArrowLeft, GoArrowRight, GoChevronDown } from "react-icons/go";
 import Slider from "react-slick"; 
 
-
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+// Rasmlar (Importlar o'zgarishsiz qoladi)
 import Cafe from './images/cafe.png';
 import Aa from './images/aa.jpg';
 import Dd from './images/dd.jpg';
@@ -14,33 +14,23 @@ import Ww from './images/ww.jpg';
 
 const Article = () => {
   const sliderRef = useRef(null);
-  
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenAccordion(openAccordion === index ? null : index);
   };
 
-  const goToPrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  };
+  const goToPrev = () => sliderRef.current?.slickPrev();
+  const goToNext = () => sliderRef.current?.slickNext();
 
-  const goToNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
-
-  
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false, 
+    arrows: false,
+    adaptiveHeight: true, // Kontentga qarab balandlikni moslash
   };
 
   const accordionData = [
@@ -51,58 +41,79 @@ const Article = () => {
   ];
 
   return (
-    <article className="article py-10">
+    <article className="article py-6 lg:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-       
-        <div className="flex items-center justify-between mb-10">
-          <h1 className="text-5xl text-blue-950 font-bold">Цены и абонементы</h1>
-          <p className="text-4xl text-blue-950 font-bold">Услуги</p>
-          <span className="flex items-center gap-4">
-            <GoArrowLeft
-              className="w-12 h-12 p-3 text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-500 cursor-pointer hover:from-purple-700 hover:to-blue-600 transition-all duration-300 shadow-lg"
+        
+        {/* Sarlavha qismi - Mobilda flex-col, Kompyuterda flex-row */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 lg:mb-12">
+          <div className="space-y-2">
+            <h1 className="text-3xl lg:text-5xl text-blue-950 font-bold">Цены и абонементы</h1>
+            <p className="text-xl lg:text-3xl text-blue-900/70 font-semibold">Услуги</p>
+          </div>
+          
+          {/* Tugmalar mobilda o'ngga suriladi yoki markazda bo'ladi */}
+          <div className="flex items-center gap-3 self-end md:self-center">
+            <button 
               onClick={goToPrev}
-            />
-            <GoArrowRight
-              className="w-12 h-12 p-3 text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-500 cursor-pointer hover:from-purple-700 hover:to-blue-600 transition-all duration-300 shadow-lg"
+              className="w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-110 active:scale-95 transition-all shadow-lg"
+              aria-label="Previous"
+            >
+              <GoArrowLeft className="text-xl lg:text-2xl" />
+            </button>
+            <button 
               onClick={goToNext}
-            />
-          </span>
+              className="w-10 h-10 lg:w-14 lg:h-14 flex items-center justify-center text-white rounded-full bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-110 active:scale-95 transition-all shadow-lg"
+              aria-label="Next"
+            >
+              <GoArrowRight className="text-xl lg:text-2xl" />
+            </button>
+          </div>
         </div>
 
-        
-        <div className="flex flex-col lg:flex-row gap-10 items-center">
+        {/* Asosiy kontent - Mobilda teskari tartib (Rasm tepada, matn pastda) qilish uchun flex-col-reverse ishlatish mumkin */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
           
-          
-          <div className="w-full lg:w-1/2">
+          {/* Akkordeon qismi */}
+          <div className="w-full lg:w-1/2 order-2 lg:order-1">
             {accordionData.map((item, index) => (
               <div key={index} className="mb-4">
-                <div 
+                <button 
                   onClick={() => toggleAccordion(index)}
-                  className="bg-purple-500 flex items-center justify-between w-full h-20 p-5 rounded-2xl cursor-pointer hover:bg-purple-600 transition-colors"
+                  className={`flex items-center justify-between w-full p-4 lg:p-6 rounded-2xl transition-all duration-300 ${
+                    openAccordion === index ? 'bg-purple-600 shadow-inner' : 'bg-purple-500 hover:bg-purple-550'
+                  }`}
                 >
-                  <h1 className="text-[24px] text-white font-[600] ">{item.title}</h1>
-                  <GoChevronDown className={`text-white text-3xl font-bold transition-transform duration-300 ${openAccordion === index ? 'rotate-180' : ''}`} />
-                </div>
+                  <span className="text-lg lg:text-xl text-white font-semibold text-left">{item.title}</span>
+                  <GoChevronDown className={`text-white text-2xl transition-transform duration-300 ${openAccordion === index ? 'rotate-180' : ''}`} />
+                </button>
                 
-               
-                {openAccordion === index && (
-                  <div className="p-5 bg-purple-50 rounded-b-2xl mt-[-10px] pt-7 shadow-inner">
-                    <p className="text-blue-950">{item.content}</p>
+                {/* Akkordeon ochilganda chiqadigan matn */}
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openAccordion === index ? 'max-h-40 opacity-100 mt-1' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="p-5 bg-white border border-purple-100 rounded-2xl shadow-sm">
+                    <p className="text-blue-950 leading-relaxed">{item.content}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
 
-         
-          <div className="w-full lg:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-            <Slider ref={sliderRef} {...settings}>
-              <div><img src={Cafe} alt="Cafe" className="w-full h-[400px] object-cover" /></div>
-              <div><img src={Aa} alt="Aa" className="w-full h-[400px] object-cover" /></div>
-              <div><img src={Dd} alt="Dd" className="w-full h-[400px] object-cover" /></div>
-              <div><img src={Uu} alt="Uu" className="w-full h-[400px] object-cover" /></div>
-              <div><img src={Ww} alt="Ww" className="w-full h-[400px] object-cover" /></div>
-            </Slider>
+          {/* Slider qismi */}
+          <div className="w-full lg:w-1/2 order-1 lg:order-2">
+            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <Slider ref={sliderRef} {...settings}>
+                {[Cafe, Aa, Dd, Uu, Ww].map((img, idx) => (
+                  <div key={idx} className="outline-none">
+                    <img 
+                      src={img} 
+                      alt={`Slide ${idx}`} 
+                      className="w-full h-[250px] md:h-[350px] lg:h-[450px] object-cover" 
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
 
         </div>
